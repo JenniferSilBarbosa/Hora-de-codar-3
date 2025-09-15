@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+</head>
+
+<body>
+    <script>
+        var num1 = parseInt(prompt("Digite o 1º número:"));
+        var soma = 0;
+
+        var contaFinalizada = false;
+
+        while (contaFinalizada == false) {
+
+            var segundoNumero = parseInt(prompt("Digite o 2º número:"))
+
+            if (num1 < segundoNumero) {
+                soma = num1 + segundoNumero;
+                contaFinalizada = true;
+            }
+        }
+
+        var media = soma / 2;
+        document.write("A média aritmética dos números inteiros entre " + num1 + " e " + segundoNumero + " é igual a: <br>" + media);
+
+        while (num1 < segundoNumero) {
+            soma += contador;
+            contador++;
+        }
+    </script>
+</body>
+
+</html>

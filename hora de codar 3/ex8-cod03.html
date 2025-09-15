@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Valores até N</title>
+</head>
+<body>
+  <h2>Valores de 1 até N</h2>
+  <input type="number" id="num" placeholder="Digite um valor N">
+  <button onclick="mostrarValores()">Mostrar</button>
+  <p id="resultado"></p>
+
+  <script>
+    function mostrarValores() {
+      var N = parseInt(document.getElementById("num").value);
+      var saida = "";
+
+      for (var i = 1; i <= N; i++) {
+        saida += i + " ";
+      }
+
+      document.getElementById("resultado").innerText = saida;
+    }
+  </script>
+</body>
+</html>

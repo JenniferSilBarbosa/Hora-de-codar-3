@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabuadas de 1 até N</title>
+</head>
+<body>
+  <h2>Tabuadas de 1 até N</h2>
+  <input type="number" id="num" placeholder="Digite o valor de N">
+  <button onclick="mostrarTabuadas()">Gerar</button>
+  <pre id="resultado"></pre>
+
+  <script>
+    function mostrarTabuadas() {
+      var N = parseInt(document.getElementById("num").value);
+      var saida = "";
+
+      for (var i = 1; i <= N; i++) {
+        saida += "Tabuada do " + i + ":\n";
+        for (var j = 1; j <= 10; j++) {
+          saida += i + " x " + j + " = " + (i * j) + "\n";
+        }
+        saida += "\n";
+      }
+
+      document.getElementById("resultado").innerText = saida;
+    }
+  </script>
+</body>
+</html>

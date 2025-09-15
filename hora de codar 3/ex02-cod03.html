@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Divisão Validada</title>
+</head>
+<body>
+    <script>
+        var a = parseFloat(prompt("Digite o primeiro valor:"));
+        var b = parseFloat(prompt("Digite o segundo valor (maior que 0):"));
+
+        while (b <= 0) {
+            b = parseFloat(prompt("Valor inválido! Digite novamente (maior que 0):"));
+        }
+
+        var resultado = a / b;
+        document.write("Resultado da divisão = " + resultado);
+    </script>
+</body>
+</html>

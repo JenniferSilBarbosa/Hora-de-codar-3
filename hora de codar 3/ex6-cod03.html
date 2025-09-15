@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Média Final</title>
+</head>
+
+<body>
+    <script>
+        var aprovados = 0
+        var resposta = "S"
+
+        while (resposta === "S" || resposta === "s") {
+            var nota1 = parseFloat(prompt("Digite a primeira nota:"))
+            var nota2 = parseFloat(prompt("Digite a segunda nota:"))
+
+            var media = (nota1 + nota2) / 2
+            alert("Média final: " + media.toFixed(2))
+
+            if (media >= 9.5) {
+                aprovados++
+                alert("Aluno aprovado! \nTotal de aprovados até agora: " + aprovados)
+            } else {
+                alert("Aluno reprovado. \nTotal de aprovados até agora: " + aprovados)
+            }
+
+            resposta = prompt("Calcular a média de outro aluno? Sim(s)/Não(n)?")
+        }
+
+        alert("Programa encerrado!\nQuantidade total de alunos aprovados: " + aprovados)
+    </script>
+</body>
+
+</html>
