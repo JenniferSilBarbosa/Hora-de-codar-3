@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Contar valores no intervalo</title>
+</head>
+<body>
+  <h2>Informe 10 valores</h2>
+  <div id="inputs"></div>
+  <button onclick="verificar()">Verificar</button>
+  <p id="resultado"></p>
+
+  <script>
+  
+    for (var i = 1; i <= 10; i++) {
+      document.getElementById("inputs").innerHTML += 
+        "Valor " + i + ": <input type='number' id='valor" + i + "'><br>";
+    }
+
+    function verificar() {
+      var dentro = 0;
+      var fora = 0;
+
+      for (var i = 1; i <= 10; i++) {
+        var num = parseInt(document.getElementById("valor" + i).value);
+
+        if (num >= 24 && num <= 42) {
+          dentro++;
+        } else {
+          fora++;
+        }
+      }
+
+      document.getElementById("resultado").innerText = 
+        "Dentro do intervalo [24, 42]: " + dentro + 
+        "\nFora do intervalo: " + fora;
+    }
+  </script>
+</body>
+</html>
